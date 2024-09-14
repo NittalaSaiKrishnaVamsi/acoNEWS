@@ -1,0 +1,78 @@
+.card {
+    position: relative;
+    border: none;
+    border-radius: 0.5rem; /* Rounded corners for a modern look */
+    overflow: hidden; /* Ensure no content spills out */
+  }
+  
+  .card-img {
+    border-spacing: 10px;
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    object-fit: cover; /* Ensure image covers the card */
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Adjust the width to cover the right side */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* White text color for contrast */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1; /* Ensure the overlay is above the card content */
+  }
+  
+  .card:hover .card-overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .card-body-overlay {
+    text-align: center; /* Center align text within the overlay */
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  /* Media query for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .card-text {
+      font-size: 0.3rem;
+      color: #f0f0f0; /* Adjust color if needed */
+    }
+  }
+  
+  /* Media query for mobile screens */
+  @media (max-width: 425px) {
+    .card-text {
+      font-size: 0.2rem;
+      color: #e0e0e0; /* Adjust color if needed */
+    }
+  }
+  
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0069d9;
+  }
+  
